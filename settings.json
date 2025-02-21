@@ -1,0 +1,149 @@
+{
+  "editor.fontSize": 13,
+  "editor.fontFamily": "FiraCodeNF-Ret,Menlo, Monaco, 'Courier New', monospace",
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "keyboard.dispatch": "keyCode",
+  // Language specific settings
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "rdbg.rubyVersionManager": "asdf",
+  "rubyLsp.rubyVersionManager": {
+    "identifier": "asdf"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Everything vim
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.enableNeovim": true,
+  "vim.leader": "<space>",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 200,
+  "vim.insertModeKeyBindings": [],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        ";"
+      ],
+      "after": [
+        ":"
+      ]
+    },
+    // LSP settings (LSP + telescope commands)
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
+    },
+    {
+      "before": [
+        "<space>",
+        "r",
+        "n"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ],
+      "silent": true
+    },
+    // Harpoon
+    {
+      "before": ["<leader>", "a"],
+      "commands": ["vscode-harpoon.addEditor"]
+    },
+    {
+      "before": ["<C-e>"],
+      "commands": ["vscode-harpoon.editEditors"]
+    },
+    {
+      "before": ["<C-h>"],
+      "commands": ["vscode-harpoon.gotoEditor1"]
+    },
+    {
+      "before": ["<C-t>"],
+      "commands": ["vscode-harpoon.gotoEditor2"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": ["vscode-harpoon.gotoEditor3"]
+    },
+    {
+      "before": ["<C-m>"],
+      "commands": ["vscode-harpoon.gotoEditor4"]
+    },
+    // Pane navigation
+    {
+      "before": ["<C-w>", "h"],
+      "commands": ["workbench.action.navigateLeft"]
+    },
+    {
+      "before": ["<C-w>", "j"],
+      "commands": ["workbench.action.navigateDown"]
+    },
+    {
+      "before": ["<C-w>", "k"],
+      "commands": ["workbench.action.navigateUp"]
+    },
+    {
+      "before": ["<C-w>", "l"],
+      "commands": ["workbench.action.navigateRight"]
+    },
+    // Tree commands
+    {
+      "before": ["<leader>", "n", "t"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    // Git
+    {
+      "before": ["<leader>", "g", "s"],
+      "commands": ["workbench.view.scm"]
+    },
+    // Search files
+    {
+      "before": ["<leader>", "s", "f"],
+      "commands": ["workbench.action.quickOpen"],
+      "silent": true
+    },
+    // Search ripgrep
+    {
+      "before": ["<leader>", "s", "g"],
+      "commands": ["periscope.search"],
+      "silent": true
+    },
+  ],
+  "workbench.colorTheme": "Rosé Pine",
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.fontAliasing": "antialiased",
+}
